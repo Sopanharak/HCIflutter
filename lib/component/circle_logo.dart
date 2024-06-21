@@ -10,8 +10,8 @@ class CircleLogo extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(7),
       child: Container(
-        height: 80,
-        width: 80,
+        height: 65,
+        width: 65,
         decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -27,6 +27,8 @@ class CircleLogo extends StatelessWidget {
           child: Center(
             child: Image(
               image: NetworkImage(brandLogo),
+              height: 50,
+              width: 50,
               // fit: BoxFit.cover,
             ),
           ),
