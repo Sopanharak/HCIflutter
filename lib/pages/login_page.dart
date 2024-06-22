@@ -144,7 +144,9 @@ class _LoginPageState extends State<LoginPage> {
                 // color: Colors.amber,
                   child: Column(children: [
                       GestureDetector(
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.pushNamed(context, '/nav_page');
+                        },
                         child: Container(
                           height: 60.0,
                           width: double.infinity,

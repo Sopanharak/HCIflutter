@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 //AppBar
-                const SizedBox(
+                SizedBox(
                   height: 50.0,
                   width: double.infinity,
                   // color: Colors.amber,
@@ -46,19 +46,24 @@ class _HomePageState extends State<HomePage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(Icons.menu,
-                        size: 25.0,
-                        color: Colors.black,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/login_page');
+                        },
+                        child: const Icon(Icons.menu,
+                          size: 25.0,
+                          color: Colors.black,
+                        ),
                       ),
 
-                      Text("SNEAKER HUB",
+                      const Text("SNEAKER HUB",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,
                         ),
                       ),
 
-                      Icon(Icons.shopping_cart,
+                      const Icon(Icons.shopping_cart,
                         size: 25.0,
                         color: Colors.black,
                       ),
@@ -230,7 +235,10 @@ class _HomePageState extends State<HomePage> {
                           scrollDirection: Axis.horizontal,
                           itemCount: _brands.length,
                           itemBuilder: (context, index){
-                            return const ProductCard();
+                            return const Padding(
+                              padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                child:ProductCard(),
+                            );
                           }
                         ),  
                       ),
@@ -242,27 +250,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         )
-      ),
-
-      //Navigate_Bar
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-        // currentIndex: _selectedIndex,
-        // selectedItemColor: Colors.blue,
-        // onTap: _onItemTapped,
       ),
     );
   }
