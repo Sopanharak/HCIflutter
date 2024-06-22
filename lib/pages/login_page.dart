@@ -19,8 +19,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-
-                const SizedBox(
+                SizedBox(
                   height: 50.0,
                   width: double.infinity,
                   // color: Colors.amber,
@@ -28,11 +27,16 @@ class _LoginPageState extends State<LoginPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(Icons.keyboard_arrow_left,
-                        size: 50.0,
-                        color: Colors.blue,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.pushNamed(context, '/loading_page');
+                        },
+                        child: const Icon(Icons.keyboard_arrow_left,
+                          size: 50.0,
+                          color: Colors.blue,
+                        ),
                       ),
-                      Text("Skip",
+                      const Text("Skip",
                           style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,

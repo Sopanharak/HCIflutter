@@ -212,9 +212,37 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 ],
                               ),
 
-                              //Lorem
-                              const Text("data")
+                              const SizedBox(height: 10),
 
+                              //Lorem
+                              const Text("Loicitur eteis non at sem. Nam lacinia enim quis ullamcorper pretium. Vestibulum lacinia metus id rutrum semper"),
+
+                              const SizedBox(height: 10),
+                              //Add_To_Card
+                              Container(
+                                height: 50,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 5.0,
+                                      color: Colors.black.withOpacity(0.5),
+                                      offset: const Offset(2.0, 2.0),
+                                    )
+                                  ],
+                                ),
+                                child: const Center(
+                                  child: Text('Add to cart',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                ),
+                              )
                             ],
                           ),
                         ),
