@@ -81,6 +81,7 @@ class ProfilePage extends StatelessWidget {
                           // Handle tap
                         },
                       ),
+                      const Divider(),
                       ListTile(
                         title: const Text('Set birthdate'),
                         trailing: const Icon(Icons.arrow_forward_ios),
@@ -88,6 +89,7 @@ class ProfilePage extends StatelessWidget {
                           // Handle tap
                         },
                       ),
+                      const Divider(),
                       ListTile(
                         title: const Text('Change Password'),
                         trailing: const Icon(Icons.arrow_forward_ios),
@@ -95,6 +97,7 @@ class ProfilePage extends StatelessWidget {
                           // Handle tap
                         },
                       ),
+                      const Divider(),
                       ListTile(
                         title: const Text('Change Address'),
                         trailing: const Icon(Icons.arrow_forward_ios),
@@ -102,6 +105,7 @@ class ProfilePage extends StatelessWidget {
                           // Handle tap
                         },
                       ),
+                      const Divider(),
                       ListTile(
                         title: const Text('Log Out'),
                         trailing: const Icon(Icons.arrow_forward_ios),
@@ -109,6 +113,7 @@ class ProfilePage extends StatelessWidget {
                           Navigator.pushNamed(context, '/login_page');
                         },
                       ),
+                      const Divider(),
                     ],
                   ),
                 )
